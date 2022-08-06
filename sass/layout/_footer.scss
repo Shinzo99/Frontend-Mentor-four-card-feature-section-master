@@ -1,0 +1,28 @@
+.footer {
+    margin-top: auto;
+    padding: 1em .5em;
+}
+
+.attribution {
+    text-align: center;
+    font-size: var(--fs-200);
+
+    span {
+        font-family: var(--ff-primary);
+        color: var(--clr-dark-greyish-blue);
+        font-weight: var(--fw-400);
+    }
+
+    a {
+        color: var(--clr-neuteral-very-dark-blue);
+        text-decoration: none;
+        font-weight: var(--fw-200);
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: var(--clr-primary-red);
+        font-weight: var(--fw-400);
+        transition: .1s;
+    }
+}

@@ -1,0 +1,153 @@
+body {
+    background-color: var(--clr-neuteral-very-light-gray);
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, p {
+    font-family: var(--ff-primary);
+}
+
+h1, h2, h3 {
+    color: var( --clr-neuteral-very-dark-blue);
+}
+
+p {
+    color: var( --clr-neuteral-grayish-blue);
+}
+
+.upper__section {
+    h1, h2, p {
+        text-align: center;
+        margin: .2em .5em;
+    }
+
+    h1{
+        font-size: var(--fs-700);
+        font-weight: var(--fw-200);
+        margin: 0em 0em;
+        padding-top: 1em;
+    }
+
+    h2{
+        font-size: var(--fs-700);
+        font-weight: var(--fw-600);
+        margin-top: 0;
+    }
+
+    p{
+        font-size: var(--fs-400);
+        margin: 1em 1em 4em 1em;
+    }
+}
+
+// card hover effect =)
+
+.inner:hover {
+    border-top: 4px solid var(--clr-neuteral-grayish-blue);
+    border-radius: 0;
+    transition: .5s;
+}
+
+.card:hover {
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.card_1:hover {
+    transform: translateX(-8px);
+}
+
+.card_2:hover {
+    transform: translateY(-8px);
+}
+
+.card_3:hover {
+    transform: translateY(8px);
+}
+
+.card_4:hover {
+    transform: translateX(8px);
+}
+
+@media (min-width: 1240px) {
+    .upper__section{
+        h1{
+            font-size: var(--fs-900);
+            font-weight: var(--fw-200);
+            margin-top: 0em;
+        }
+    
+        h2{
+            font-size: var(--fs-900);
+            font-weight: var(--fw-600);
+        }
+    
+        p{
+            font-size: var(--fs-400);
+            margin: 1em auto 4em auto;
+            max-width: 35em;
+        }
+    }
+
+    .lower__section {
+        display: flex;     
+        justify-content: center;  
+        
+        .card h3 {
+            padding-top: .5em;
+        }
+
+        .feature_section_1 {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1240px) {
+    
+    .upper__section{
+        h1{
+            font-size: var(--fs-800);
+            font-weight: var(--fw-200);
+            margin-top: 0em;
+        }
+    
+        h2{
+            font-size: var(--fs-800);
+            font-weight: var(--fw-600);
+        }
+    
+        p{
+            font-size: var(--fs-400);
+            margin: 1em auto 4em auto;
+            max-width: 35em;
+        }
+    }
+
+    .lower__section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        & > :first-child {
+            grid-column: 2;
+            .card {
+                min-height: 16em;
+                min-width: 16em;
+            }
+        }
+
+        & > :nth-child(2) {
+            grid-row: 2;
+            grid-column: 2 / span 2;
+        }
+
+        & > :last-child {
+            .card {
+                min-height: 16em;
+                min-width: 16em;
+            }
+        }
+    }
+}
